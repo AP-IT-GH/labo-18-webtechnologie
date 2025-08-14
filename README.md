@@ -13,9 +13,6 @@ webtechnologie/
 │  │  ├─ css/
 │  │  │   ├─ reset.css
 │  │  │   └─ style.css
-│  │  ├─ data/
-│  │  │   ├─ datafile-1.json
-│  │  │   └─ datafile-2.json
 │  │  └─ js/
 │  │     └─ script.js
 │  ├─ oefening-02/
