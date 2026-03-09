@@ -24,6 +24,8 @@ webtechnologie/
 - Gebruik steeds JS modules om globale variabelen te vermijden (`<script type="module" src="./path/to/script.js" defer></script>`)
 - Zet je Javascript file steeds in strict mode (`"use strict"`);
 - Volg de [Coding Guidelines](https://apwt.gitbook.io/webtechnologie/coding-guidelines)
+- Voor invoer kun je hardcoded variabelen of de `prompt()` functie gebruiken.
+- Print resultaten uit in de console.
 
 ## oefening 1: bereken de som en het product
 
@@ -41,7 +43,7 @@ Schrijf een JavaScript-functie genaamd `calculate` die twee getallen en een call
 1. Schrijf een functie genaamd `calculate` die twee parameters (getallen) en een derde parameter (callback-functie) accepteert.
 2. In de functie `calculate`, bereken de som van de twee getallen.
 3. Roep de callback-functie aan met de berekende som als argument.
-4. Lees in deze callback-functie het resultaat uit naar de console of DOM.
+4. Lees in deze callback-functie het resultaat uit in de console.
 
 ### voorbeeldinteractie
 ![voorbeeldinteractie](./voorbeeldinteractie-calculate.avif)
@@ -62,7 +64,7 @@ Schrijf een JavaScript-functie genaamd `modifyString` die een string en een call
 1. Schrijf een functie genaamd `modifyString` die een string en een callback-functie accepteert.
 2. In de functie `modifyString`, bereken de lengte van de string.
 3. Roep de callback-functie aan met de lengte van de string als argument.
-4. Lees het resultaat uit in de console of DOM.
+4. Lees het resultaat uit in de console.
 
 ### voorbeeldinteractie
 
@@ -107,16 +109,7 @@ Schrijf een factory-functie genaamd `createCalculator` die een wiskundige bewerk
 
 ![voorbeeldinteractie](./voorbeeldinteractie-rekenmachine.avif)
 
-### uitbreiding
 
-7. **Maak een leeg ul-element aan in de HTML**
-8. **Maak een extra functie `printToDom` aan**  
-   Deze functie accepteert één argument en schrijft dit weg als een `<li>`-element binnen een bestaand `<ul>`-element in de DOM.
-9. **Roep de geretourneerde functie uit stap 4 nogmaals aan**  
-   Geef dit keer `printToDom` mee als derde argument (de callback).
-
-#### voorbeeldinteractie uitbreiding
-[voorbeeldinteractie](./voorbeeldinteractie-uitbreiding-rekenmachine.avif)
 
 ## oefening 4: gebruik van de spread operator
 
@@ -133,13 +126,30 @@ Schrijf een JavaScript-functie genaamd `mergeArrays` die twee arrays accepteert 
 
 1. Schrijf een functie genaamd `mergeArrays` die twee parameters (arrays) accepteert.
 2. Gebruik de spread-operator om beide arrays samen te voegen in een nieuwe array.
-3. Lees het resultaat uit in de console of DOM.
+3. Lees het resultaat uit in de console.
 
 ### voorbeeldinteractie
 
 ![voorbeeldinteractie](./voorbeeldinteractie-merge-arrays.avif)
 
-## oefening 5: sorteren van objecten
+## oefening 5: sorteren van strings
+
+### leerdoelen
+
+* kennismaken met het sorteren van arrays in JavaScript.
+* begrijpen hoe de sort-functie werkt met strings.
+
+### functionele analyse
+
+Schrijf een JavaScript-functie genaamd `sortStrings` die een array van strings accepteert. De functie moet de array alfabetisch sorteren.
+
+### technische analyse
+
+1. Schrijf een functie genaamd `sortStrings` die één parameter (array van strings) accepteert.
+2. Gebruik de ingebouwde sort-functie van JavaScript om de array te sorteren.
+3. Lees het resultaat uit in de console.
+
+## oefening 6: sorteren van objecten
 
 ### leerdoelen
 
@@ -154,13 +164,15 @@ Schrijf een JavaScript-functie genaamd `sortByAttribute` die een array van objec
 
 1. Schrijf een functie genaamd `sortByAttribute` die twee parameters accepteert: de array van objecten en de attribuutnaam om op te sorteren.
 2. Gebruik de sort-functie met een aangepaste vergelijkingsfunctie om de array van objecten te sorteren op het opgegeven attribuut.
-3. Lees het resultaat uit in de console of DOM.
+3. Lees het resultaat uit in de console.
+
+> Tip: voor deze oefening kun je er van uitgaan dat de strings die je gaat sorteren allemaal met een hoofdletter beginnen en géén accenten bevatten, zodat je dezelfde callback functie kunt gebruiken voor string en number vergelijkingen
 
 ### voorbeeldinteractie
 
 ![voorbeeldinteractie](./voorbeeldinteractie-sorteren-van-objecten.avif)
 
-## oefening 6: filteren en verdubbelen
+## oefening 7: filteren en verdubbelen
 
 ### leerdoelen
 
@@ -176,12 +188,12 @@ Schrijf een JavaScript-functie genaamd `filterAndDouble` die een array van getal
 1. Schrijf een functie genaamd `filterAndDouble` die een array van getallen accepteert.
 2. Gebruik de filter-functie om alleen even getallen te behouden.
 3. Gebruik de map-functie om de overgebleven getallen te verdubbelen.
-4. Lees het resultaat uit in de console of DOM.
+4. Lees het resultaat uit in de console.
 
 ### voorbeeldinteractie
 ![voorbeeldinteractie](./voorbeeldinteractie-filteren-en-verdubbelen.avif)
 
-## Oefening 7: reduce
+## Oefening 8: reduce
 
 ### leerdoelen
 
@@ -195,11 +207,11 @@ Schrijf een JavaScript-functie genaamd `calculateTotalPrice` die een array van g
 
 1. Schrijf een functie genaamd `calculateTotalPrice` die een array van getallen accepteert.
 2. Gebruik de reduce functie om alle getallen in de array met elkaar op te tellen
-3. Lees het resultaat uit in de console of DOM.
+3. Lees het resultaat uit in de console.
 
 ![voorbeeldinteractie](./voorbeeldinteractie-reduce.avif)
 
-## Oefening 8: minstens twee
+## Oefening 9: minstens twee
 
 * Schrijf een arrow functie `isOdd` die via de returnwaarde aangeeft of een getal oneven is.
 * Schrijf een arrow functie `isEven` die via de returnwaarde aangeeft of een getal even is.
